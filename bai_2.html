@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<script>
+    let a = prompt('nhap so thu nhat:');
+    let b = prompt('nhap so thu hai:');
+
+    function test(a, b) {
+        let sum1 = 0;
+        let sum2 = 0;
+        for (let i = 0; i < a; i++) {
+            if (a % i === 0) {
+                sum1 = sum1 + i; // Tổng ước của số thứ 1
+            }
+        }
+        for (let j = 0; j < b; j++) {
+            if (b % j === 0) {
+                sum2 = sum2 + j; // Tổng ước của số thứ 2
+            }
+        }
+            if (sum1 === b && sum2 === a) { // số này bằng tổng tất cả các ước của số kia
+            return true;
+        } else {
+            return false;
+        }
+    }
+    alert(test(a, b));
+</script>
+</body>
+</html>

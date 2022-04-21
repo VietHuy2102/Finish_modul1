@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1</title>
+</head>
+<body>
+<script>
+    //Nhập từ bàn phím mảng số nguyên gồm n phần tử (n<=50), Hiển thị ra màn hình trung bình cộng các số lẻ ở vị trí chẵn
+    let arr = [1, 2, 3, 4, 6, 7, 9, 11, 13, 17,19]
+
+    function avg(arr) {
+        let sum = 0;
+        let avg = 0;
+        let new_arr = [];
+        if (arr.length <= 50) {
+            for (let i = 0; i < arr.length; i++) {
+                if (i%2===0){ // Nếu i ở vị trí chẵn
+                    if (arr[i] % 2 !== 0) { // Nếu vị trí chẵn đó /2 không bằng 0 tức số lẻ
+                        new_arr.push(i);// Push số lẻ ở vị trí chẵn đó vào 1 mảng mới newarr để mình tính trung bình cộng
+                        sum = sum + arr[i];
+                        avg = sum / new_arr.length;
+                    }
+                }
+            }
+            return avg;
+        }
+        else{
+            return 'so phan tu trong mang lon hon 50';
+        }
+    }
+    alert(`mảng trên có trung bình cộng là ${avg(arr)}`);
+</script>
+</body>
+</html>
+</body>
+</html>
